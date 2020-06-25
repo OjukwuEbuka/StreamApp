@@ -15,7 +15,7 @@ export default (state={}, action) => {
         case FETCH_STREAM:
             return { ...state, [action.payload.id]: action.payload};
         case DELETE_STREAM:
-            delete state[action.payload.id];
+            delete state[action.payload];
             return { ...state };
         case FETCH_STREAMS:
             const streams = action.payload.reduce((acc, stream) => { 
